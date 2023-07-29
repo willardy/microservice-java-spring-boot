@@ -18,7 +18,5 @@ public class FolhaDePagamentoController {
     @GetMapping(value = "/{funcionarioId}/dias/{dias}")
     public ResponseEntity<FolhaDePagamento> obterFolhaPagamento(@PathVariable Long funcionarioId, @PathVariable Integer dias){
         return ResponseEntity.ok(folhaDePagamentoService.obterFolhaDePagamento(funcionarioId, dias));
-
     }
-
 }
