@@ -34,6 +34,13 @@ public class FuncionarioController {
     @GetMapping(value = "/{id}")
     public ResponseEntity<Funcionario> buscaFuncionarioPorId(@PathVariable Long id) {
 
+       /* Teste do fallback
+       try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }*/
+
         logger.info("PORT: " + env.getProperty("local.server.port"));
 
         return ResponseEntity.ok(funcionarioService.buscaFuncionarioPorId(id));
